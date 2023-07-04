@@ -1,0 +1,281 @@
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: Monsterrat;
+  src: url(../font/Montserrat-Regular.ttf);
+}
+figcaption, p, button, h1 {
+  font-family: Inter;
+}
+
+body .form-container .vector-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  -webkit-animation: vector-appear 5s linear;
+          animation: vector-appear 5s linear;
+}
+body .form-container .vector-2 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: vector-appear 5s linear;
+          animation: vector-appear 5s linear;
+}
+body .form-container figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+body .form-container figure figcaption {
+  -webkit-animation: header-appear 1s linear;
+          animation: header-appear 1s linear;
+}
+body .form-container figure form {
+  background-color: white;
+  border: solid #B668F2;
+  -webkit-animation: border-change 8s ease-out;
+          animation: border-change 8s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2vw 3vw;
+}
+body .form-container figure form p {
+  margin-left: 10%;
+  -webkit-animation: p-appear 4s ease-out;
+          animation: p-appear 4s ease-out;
+}
+body .form-container figure form .log-in-button {
+  margin: 5vh auto 2vh auto;
+  color: white;
+  background-color: #82C877;
+  -webkit-animation: log-in-button 5s linear;
+          animation: log-in-button 5s linear;
+  border-radius: 3vw;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body .form-container figure form .log-in-button:hover {
+  color: rgb(248, 236, 236);
+  background-color: #5baf4e;
+  box-shadow: 0 4px 10px rgba(110, 182, 99, 0.5215686275);
+}
+body .form-container figure form .sign-up-button {
+  margin: auto;
+  border-radius: 3vw;
+  border: none;
+  transition: 0.5s;
+  background-color: #62A4E1;
+  -webkit-animation: sign-up-button 5s linear;
+          animation: sign-up-button 5s linear;
+  color: white;
+  cursor: pointer;
+}
+body .form-container figure form .sign-up-button:hover {
+  color: rgb(248, 234, 234);
+  background-color: #468bcc;
+  box-shadow: 0 4px 8px #5994ca;
+}
+body .form-container aside p {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .vector-1, .vector-2 {
+    display: none;
+  }
+  .vector-3 {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-animation: vector-appear 5s linear;
+            animation: vector-appear 5s linear;
+  }
+  figure {
+    margin-top: 8vh;
+    border-radius: 4vw;
+  }
+  figure figcaption {
+    font-size: 7vw;
+    margin-bottom: 4vh;
+  }
+  figure form {
+    width: 90%;
+    border-width: 0.5px;
+    border-radius: 4vw;
+  }
+  figure form p {
+    font-size: 4vw;
+  }
+  figure form .log-in-button {
+    font-size: 5vw;
+    width: 75%;
+    padding: 1.5vw;
+  }
+  figure form .sign-up-button {
+    font-size: 4vw;
+    width: 75%;
+    padding: 1.5vw;
+  }
+  aside {
+    margin-top: 5vh;
+  }
+  aside p {
+    font-size: 3vw;
+    color: rgba(29, 29, 29, 0.712);
+  }
+}
+@media (min-width: 700px) {
+  .vector-3 {
+    display: none;
+  }
+  figure {
+    margin-top: 13vh;
+  }
+  figure figcaption {
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+  }
+  figure form {
+    width: 30%;
+    border-width: 3px;
+    border-radius: 1vw;
+  }
+  figure form p {
+    font-size: 1vw;
+  }
+  figure form .log-in-button {
+    font-size: 1.6vw;
+    width: 45%;
+    padding: 0.5vw;
+  }
+  figure form .sign-up-button {
+    font-size: 1vw;
+    width: 45%;
+    padding: 0.5vw;
+  }
+  aside p {
+    font-size: 0.8vw;
+    color: white;
+  }
+}
+@-webkit-keyframes header-appear {
+  from {
+    transform: translate(0, 10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes header-appear {
+  from {
+    transform: translate(0, 10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes p-appear {
+  from {
+    transform: translate(0, 105px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes p-appear {
+  from {
+    transform: translate(0, 105px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes vector-appear {
+  from {
+    filter: brightness(250%);
+  }
+  95% {
+    filter: brightness(90%);
+  }
+}
+@keyframes vector-appear {
+  from {
+    filter: brightness(250%);
+  }
+  95% {
+    filter: brightness(90%);
+  }
+}
+@-webkit-keyframes log-in-button {
+  from {
+    background-color: rgba(175, 175, 175, 0.6509803922);
+  }
+  to {
+    background-color: #82C877;
+  }
+}
+@keyframes log-in-button {
+  from {
+    background-color: rgba(175, 175, 175, 0.6509803922);
+  }
+  to {
+    background-color: #82C877;
+  }
+}
+@-webkit-keyframes sign-up-button {
+  from {
+    background-color: rgba(175, 175, 175, 0.6509803922);
+  }
+  to {
+    background-color: #62A4E1;
+  }
+}
+@keyframes sign-up-button {
+  from {
+    background-color: rgba(175, 175, 175, 0.6509803922);
+  }
+  to {
+    background-color: #62A4E1;
+  }
+}
+@-webkit-keyframes border-change {
+  from {
+    border: solid rgba(226, 203, 243, 0);
+  }
+  to {
+    border: solid #B668F2;
+  }
+}
+@keyframes border-change {
+  from {
+    border: solid rgba(226, 203, 243, 0);
+  }
+  to {
+    border: solid #B668F2;
+  }
+}/*# sourceMappingURL=style.css.map */
